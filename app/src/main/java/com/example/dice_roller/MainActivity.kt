@@ -1,9 +1,9 @@
 package com.example.dice_roller
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         }}
     }
 
+    fun damageRoll(view: View) {
+        val intent = Intent(this, DiceActivity::class.java).apply {
+        }
+        startActivity(intent)
+    }
 
     private val listener= View.OnClickListener { view ->
         when (view.id) {

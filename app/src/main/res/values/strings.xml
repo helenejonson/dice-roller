@@ -3,4 +3,5 @@
     <string name="roll">Roll</string>
     <string name="advantage">Advantage</string>
     <string name="disadvantage">Disadvantage</string>
+    <string name="Damage">Damage</string>
 </resources>
