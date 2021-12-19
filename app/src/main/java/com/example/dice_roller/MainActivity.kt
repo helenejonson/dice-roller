@@ -2,10 +2,8 @@ package com.example.dice_roller
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.CompoundButton
-import android.widget.TextView
+import android.widget.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
@@ -13,15 +11,25 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
     private lateinit var rollBtn : Button
     lateinit var adv : CheckBox
-    private lateinit var dis : CheckBox
+    lateinit var dis : CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         rollBtn = findViewById(R.id.rollbtn)
         rollBtn.setOnClickListener(listener)
-        //dis.setOnCheckedChangeListener(checkChange)
+        adv = findViewById(R.id.advantage)
+        dis = findViewById(R.id.disadvantage)
+        adv.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked && dis.isChecked) {
+                dis.isChecked=false
+            }}
+        dis.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked && adv.isChecked) {
+                adv.isChecked=false
+        }}
     }
+
 
     private val listener= View.OnClickListener { view ->
         when (view.id) {
