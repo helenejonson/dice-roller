@@ -4,4 +4,13 @@
     <string name="advantage">Advantage</string>
     <string name="disadvantage">Disadvantage</string>
     <string name="Damage">Damage</string>
+    <string name="d4">4</string>
+    <string name="d6">6</string>
+    <string name="d8">8</string>
+    <string name="d10">10</string>
+    <string name="d12">12</string>
+    <string name="number0">0</string>
+    <string name="rolls">Rolls</string>
+    <string name="sum">Sum</string>
+
 </resources>
